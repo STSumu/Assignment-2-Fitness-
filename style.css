@@ -1,202 +1,205 @@
-
 *{
     color:white;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight:400;
+  font-weight: 400;
   font-style: normal;
 }
-
-/* shared style  */
 
 body{
     background-color: black;
 }
-.btn{
-    background-color:#E6533C ;
-    font-size:1.15rem;
-    font-weight:600;
-    border-radius:46px;
-    border:none;
-    padding:16px 47px;
-    margin-top:28px;
+/* header{
+    background: linear-gradient(180deg, #111111 0%, rgba(119, 119, 119, 0) 100%);
+
+} */
+header {
+    background: linear-gradient(
+        to top,
+        rgba(17, 17, 17, 1) 0%,
+        rgba(17, 17, 17, 1) 100%
+       
+    );   
+}
+.hero,.navbar,main{
+    max-width: 1250px;
+    margin:0 auto;
 }
 .display-flex{
     display: flex;
 }
+.display-grid{
+    display: grid;
+}
 .description{
     font-size:1rem ;
     color:rgba(255, 255, 255, 0.5);
+    margin:0;
 }
-header {
-        background: linear-gradient(
-            to bottom,
-            rgba(119, 119, 119, 0) 0%,
-            rgba(17, 17, 17, 1) 50%,
-            rgba(17, 17, 17, 1) 50%,
-            rgba(119, 119, 119, 0) 100%
-        );
-    
+.btn{
+    background-color: #e6533c;
+    padding:16px 47px;
+    border-radius: 42px;
+    border:none;
+    font-weight:600;
 }
-.nav-bar,.hero,.main{
-    max-width: 1250px;
-    margin:0 auto;
-}
+
 
 /* navbar styles */
 
-.nav-bar{
+.navbar{
     justify-content: space-between;
     align-items: center;
 }
 .nav-title{
-    color:#E6533C;
-    font-weight:800;
-    font-style: italic;
     font-size: 36px;
-}
-.nav-bar li{
-    list-style: none;
+    font-weight: 800;
+    font-style: italic;
+    color:#e6533c;
 }
 .nav-items{
-    display: grid;
     grid-template-columns: repeat(4,1fr);
-    padding:4px;
     align-items: center;
+    gap:47px;
     border:1px solid rgba(255, 255, 255, 0.1);
     border-radius: 39px;
-    gap:47px;
+    padding:4px;
 }
-.nav-items .btn{
+.nav-items li{
+    list-style: none;
+}
+.home{
+    background-color:#e6533c;
     padding:12px 20px;
-    margin:0;
+    border-radius:46px;
 }
 
-/* hero section styles */
+/* hero section styles  */
 
 .hero{
-    margin-top:32px;
-    gap:90px;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap:170px;
 }
 .hero-content{
+    flex-direction: column;
     max-width:550px;
-    margin:0px;
+    gap:28px;
 }
 .hero-title{
     font-size: 4.8rem;
-    font-weight:900;
-}
-.special-font{
-    font-family: "League Script", cursive;
-  font-weight: 500;
-}
-.special-button{
-    background-color:black;
-    border:1px solid white;
-}
-
-/* hero cards styles  */
-
-.hero-card{
-    border-radius: 12px;
-    padding:20px 23px;
-    border:1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    width:190px;
-}
-.card1{
-    background-color: rgba(48, 48, 48, 0.54);
-    align-items: center;
-    justify-content: space-evenly;
-    margin-left:-150px;
-    margin-top:-160px;
-}
-.card2{
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-bottom:-225px;
-    margin-left: 230px;
-}
-.card1-title{
-    font-size: 1.5rem;
     font-weight: 900;
     margin:0;
 }
-.card2-title{
-    font-size:2.5rem;
-    font-weight: 900;
-    margin-top: 0px;
-    margin-bottom:8px;
+.shape{
+    font-family: "League Script", cursive;
+    font-weight: 500;
 }
-.card2 .description{
-    font-size: 0.8rem;
-    margin-top:2px;
+.special-button{
+    background-color: black;
+    border:1px solid rgba(255, 255, 255, 1);
+    margin-left:14px;
 }
-.card1-circle{
-    height: 40px;
-    width: 40px;
+.hero-card{
+    border:1px solid rgba(255, 255, 255, 0.1);
+    max-width: 210px;
+    border-radius:12px;
+    padding:17px 24px;
+    backdrop-filter: blur(10px);
+    position:absolute;
+    text-align: left;
+}
+.card1{
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top:130px;
+    margin-left: 230px;
+}
+.card1 .description{
+    font-size:0.8rem;
+}
+.card1-title{
+    font-size:2.5rem ;
+    font-weight:900;
+    margin:0px;
+}
+.card2{
+    background-color: rgba(48, 48, 48, 0.54);
+    margin-top:400px;
+    margin-left:-92px;
+    gap:12px;
+    align-items: center;
+}
+.circle{
+    height:40px;
+    width:40px;
     border-radius: 50%;
-    background-color: #E6533C;
+    background-color: #e6533c;
+}
+.card2-title{
+    font-size:1.5rem;
+    font-weight:900 ;
+    margin:0;
 }
 
-/* Responsive layout styles */
 
-/* small device */
+/* Responsive styles */
 
 @media screen and (max-width:576px){
-    body{
-        margin:0px 20px;
+     
+    .hero-content,.navbar,.main{
+        padding:0px 20px;
     }
+    /* navbar styles  */
+    
     .nav-items{
         display: none;
     }
-    .navbox{
-        height:24px;
+    .nav-corner{
+        height: 24px;
         width:24px;
+        display: flex;
+        flex-direction: column;
+        gap:4px;
     }
     .nav-line{
+        height:2px;
         width:18px;
         background-color: white;
-        height:2px;
-        margin-bottom: 4px;
     }
-    .navbox:hover .nav-items{
+    .nav-corner:hover .nav-items{
         display:grid;
         grid-template-columns: repeat(1,1fr);
-        margin-left:-80px;
+        margin-left: -80px;
         justify-items: center;
         gap:20px;
     }
+
+    /* hero section styles  */
+
     .hero{
         flex-direction: column;
+        gap:50px;
     }
     .hero-title{
         font-size:36px;
     }
-    
-    .special-button,.btn{
+    .btn{
         padding:16px 20px;
-    }
-    .hero-card{
-        padding:15px;
-    }
-    .card1{
-        margin-left:0px;
-        margin-top:-320px;
-        width:140px;
-        justify-content: space-between;
-    }
-    .card2{
-        width:120px;
-        margin-bottom:-150px;
-        margin-left: 190px;
+        margin-bottom:8px;
     }
     .hero-image{
         width:100%;
     }
-    .card1-title,.card2-title,.hero-image .description{
-        margin:0px;
+    .hero-card{
+        padding:12px 17px;
+    }
+    .card1{
+        margin-left:185px;
+        margin-top:40px;
+    }
+    .card2{
+        margin-left:0px;
+        margin-top:270px;
     }
 }
 
@@ -207,20 +210,11 @@ header {
         flex-direction: column;
         justify-content: center;
     }
-    body{
+    .hero,.navbar,.main{
         margin:0px 30px;
     }
-    .hero-image{
-        margin-top:100px;
-    }
-    img{
-        width:100%;
-    }
     .card1{
-        margin-left:-50px;
-        margin-top:-331px;
-    }
-    .card2{
-        margin-left:300px;
+        margin-top:50px;
+        margin-left:190px;
     }
 }
