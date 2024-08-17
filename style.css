@@ -20,7 +20,7 @@ header {
        
     );   
 }
-.hero,.navbar,main,.foot-content,.copyright-content{
+.hero,.navbar,section,.foot-content,.copyright-content,.bmi-content{
     max-width: 1250px;
     margin:0 auto;
 }
@@ -186,7 +186,7 @@ section{
     align-items: center;
 }
 .run img{
-    width:calc((100% - 160px)/2);
+    width:calc((100% - 160px - 108px)/2);
     border-radius: 18px;
 }
 .run-content,.foot-logo{
@@ -224,8 +224,71 @@ section{
     grid-column: span 3;
 }
 
+/* bmi section  */
+
+.bmi{
+    background-color: rgba(34, 34, 34, 1);
+    max-width:1540px;
+    margin:0 auto;
+}
+.bmi-content{
+    padding:52px 0px;
+    gap:175px;
+    text-align: left;
+}
+.bmi-title{
+    font-size:1.75rem;
+    font-weight: 900;
+    margin-bottom:14px;
+}
+table{
+    border-collapse: collapse;
+    margin-top: 52px;
+}
+tr{
+    margin:10px;
+}
+td,th{
+    border:1px solid rgba(255, 255, 255, 0.1);
+    margin:0;
+    padding:10px 20px;
+    color:rgba(255, 255, 255, 0.5);
+    font-size:0.875rem;
+}
+th{
+    font-size: 1rem;
+    color:white;
+    font-weight: 500;
+}
+.bmi-form{
+    grid-template-columns: repeat(1,1fr);
+    gap:12px;
+    margin-top:35px;
+    margin-bottom:35px;
+}
+.bmi-form div{
+    gap:12px;
+}
+input,select{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding:13px 20px;
+    border-radius:8px;
+    border:none;
+    color:rgba(255, 255, 255, 0.6);
+    font-weight:400;
+    font-size:1rem;
+    width:100%;
+}
+option{
+    color:rgba(255, 255, 255, 0.6);
+    background-color:rgb(54, 52, 52);
+    font-weight:400;
+}
 /* Team section style  */
 
+.team .section-content{
+    text-align: center;
+}
 .team-container{
     grid-template-columns: repeat(3,1fr);
     gap:20px;
@@ -307,7 +370,7 @@ footer{
 
 @media screen and (max-width:576px){
      
-    .hero-content,.navbar,main,.foot-content,.copyright-content{
+    .hero-content,.navbar,section,.foot-content,.copyright-content{
         padding:0px 20px;
     }
     /* navbar styles  */
@@ -337,7 +400,7 @@ footer{
 
     /* hero section styles  */
 
-    .hero,.run{
+    .hero,.run,.bmi-content{
         flex-direction: column;
         gap:50px;
     }
@@ -379,6 +442,12 @@ footer{
         width:100%;
     }
 
+    /* BMI section  */
+
+    .bmi{
+        margin:0;
+    }
+
     /* team section  */
 
     .team-container{
@@ -387,7 +456,7 @@ footer{
 
     /* footer section  */
 
-    .foot-content,.foot-items{
+    .foot-content,.foot-items,.bmi{
         flex-direction: column;
         gap:25px;
         align-items: start;
@@ -397,11 +466,11 @@ footer{
 /* Medium device styles */
 
 @media screen and (min-width:576px) and (max-width:992px){
-    .hero{
+    .hero,.bmi-content{
         flex-direction: column;
     }
-    .hero,.navbar,main,.foot-content,.copyright-content{
-        margin:0px 30px;
+    .hero,.navbar,section,.foot-content,.copyright-content{
+        padding:0px 30px;
     }
     .card1{
         margin-top:50px;
@@ -421,4 +490,5 @@ footer{
         flex-direction: column;
         align-items: start;
     }
+
 }
