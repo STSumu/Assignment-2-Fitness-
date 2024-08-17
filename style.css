@@ -18,7 +18,8 @@ header {
         rgba(17, 17, 17, 1) 0%,
         rgba(17, 17, 17, 1) 100%
        
-    );   
+    );  
+    padding-top:52px; 
 }
 .hero,.navbar,section,.foot-content,.copyright-content,.bmi-content{
     max-width: 1250px;
@@ -57,6 +58,7 @@ section{
 .navbar{
     justify-content: space-between;
     align-items: center;
+    margin-bottom:52px;
 }
 .nav-title{
     font-size: 36px;
@@ -298,25 +300,29 @@ option{
 }
 .team-item{
     border-radius:18px;
-    height:272px;
-    background-size: cover;
-    background-position: center;
+    height:280px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
     padding-left: 20px;
 }
 .team-item h5{
     margin-top:220px;
+    margin-bottom:0;
 }
 .team-item1{
     background-image: url(images/trainer1.png);
 }
 .team-item2{
     background-image: url(images/trainer2.png);
+    background-position: center;
 }
 .team-item3{
     background-image: url(images/trainer3.png);
 }
 .team-item4{
     background-image: url(images/trainer4.png);
+    background-position: center;
 }
 .team-item5{
     background-image: url(images/trainer5.png);
