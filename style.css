@@ -540,6 +540,13 @@ footer{
         gap:25px;
         align-items: start;
     }
+    .diet{
+        width: 100%;
+        height:200px;
+    }
+    .diet-content{
+        gap:10px;
+    }
 }
 
 /* Medium device styles */
@@ -569,5 +576,11 @@ footer{
         flex-direction: column;
         align-items: start;
     }
-
+    .diet{
+        width: 100%;
+        height:400px;
+    }
+    .diet-content{
+        gap:20px;
+    }
 }
